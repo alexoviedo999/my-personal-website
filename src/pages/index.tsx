@@ -1,10 +1,32 @@
 import { useRouter } from 'next/router';
+import { useEffect, useRef, useState } from 'react';
+import * as THREE from 'three';
+import NET from 'vanta/dist/vanta.net.min';
 
 import { Meta } from '@/layouts/Meta';
 import { Main } from '@/templates/Main';
 
 const Index = () => {
   const router = useRouter();
+
+  const [vantaEffect, setVantaEffect] = useState(0);
+  const vantaRef = useRef(null);
+  useEffect(() => {
+    if (!vantaEffect) {
+      setVantaEffect(
+        NET({
+          el: vantaRef.current,
+          THREE,
+          color: 0x14b679,
+          backgroundColor: 0x15173c,
+          maxDistance: 34.0,
+        })
+      );
+    }
+    // return () => {
+    //   if (vantaEffect) vantaEffect.destroy();
+    // };
+  }, [vantaEffect]);
 
   return (
     <Main
@@ -15,6 +37,7 @@ const Index = () => {
         />
       }
     >
+      <div ref={vantaRef}></div>
       <a href="https://github.com/ixartz/Next-js-Boilerplate">
         <img
           src={`${router.basePath}/assets/images/nextjs-starter-banner.png`}
