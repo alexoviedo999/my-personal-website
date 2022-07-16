@@ -34,15 +34,34 @@ const Index = () => {
         />
       }
     >
-      <div ref={vantaRef} className="fixed -mt-10 h-full w-full">
-        <div className="grid grid-cols-2 gap-2">
-          <h1 className="mt-5 text-center text-4xl font-semibold text-white drop-shadow-lg">
-            Hello, I am Alejandro Oviedo
-            <span className="text-yellow-300">
-              I am a front-end develop with with many interests.
-            </span>
-          </h1>
-          <h3 className="text-2xl text-orange-400">HI THERE</h3>
+      <div
+        ref={vantaRef}
+        className="fixed -mt-10 flex h-full w-full flex-col justify-center"
+      >
+        <div className="relative z-20">
+          <div className="container relative mx-auto flex flex-row flex-wrap justify-center px-6 py-4">
+            <div className="flex-col px-10">
+              <h1 className="text-color mt-5 text-left text-4xl font-semibold drop-shadow-lg">
+                Hello, I am Alejandro Oviedo
+              </h1>
+              <h3 className="text-color text-left font-semibold drop-shadow-lg">
+                I am a front-end developer with with many interests.
+              </h3>
+            </div>
+            <div className="flex-col px-10">
+              <ul>
+                <li className="text-color-link text-[30px] font-semibold drop-shadow-lg">
+                  Skills
+                </li>
+                <li className="text-color-link text-[30px] font-semibold drop-shadow-lg">
+                  Projects
+                </li>
+                <li className="text-color-link text-[30px] font-semibold drop-shadow-lg">
+                  Other Interests
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </Main>

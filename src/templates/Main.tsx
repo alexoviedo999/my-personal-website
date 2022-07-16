@@ -13,32 +13,26 @@ const Main = (props: IMainProps) => (
     {props.meta}
 
     <div className="">
-      <div className="fixed top-0 left-auto right-0 z-50 flex w-full shrink-0 flex-col border-b border-gray-300">
-        {/* <div className="pt-16 pb-8">
-          <div className="text-3xl font-bold text-gray-900">
-            {AppConfig.title}
-          </div>
+      <div className="fixed z-30 flex h-10 w-full items-center bg-[#15183c] px-5 font-sans shadow-lg sm:h-14">
+        <div className="hidden">
+          <div className="">{AppConfig.title}</div>
           <div className="text-xl">{AppConfig.description}</div>
-        </div> */}
-        <div>
+        </div>
+        <div className="">
           <ul className="flex flex-wrap text-xl">
             <li className="mr-6">
               <Link href="/">
-                <a className="border-none text-gray-700 hover:text-gray-900">
-                  Home
-                </a>
+                <a className="text-color-link border-none">Home</a>
               </Link>
             </li>
             <li className="mr-6">
               <Link href="/about/">
-                <a className="border-none text-gray-700 hover:text-gray-900">
-                  About
-                </a>
+                <a className="text-color-link border-none">About</a>
               </Link>
             </li>
             <li className="mr-6">
               <a
-                className="border-none text-gray-700 hover:text-gray-900"
+                className="text-color-link border-none"
                 href="https://github.com/ixartz/Next-js-Boilerplate"
               >
                 GitHub
@@ -48,7 +42,7 @@ const Main = (props: IMainProps) => (
         </div>
       </div>
 
-      <div className="mt-5 py-5 text-xl">{props.children}</div>
+      <div className="py-5 text-xl">{props.children}</div>
 
       <div className="border-t border-gray-300 py-8 text-center text-sm">
         © Copyright {new Date().getFullYear()} {AppConfig.title}. Powered with{' '}
