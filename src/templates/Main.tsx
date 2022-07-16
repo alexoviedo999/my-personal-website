@@ -9,17 +9,17 @@ type IMainProps = {
 };
 
 const Main = (props: IMainProps) => (
-  <div className="w-full px-1 text-gray-700 antialiased">
+  <div className="">
     {props.meta}
 
-    <div className="mx-auto max-w-screen-md">
-      <div className="border-b border-gray-300">
-        <div className="pt-16 pb-8">
+    <div className="">
+      <div className="fixed top-0 left-auto right-0 z-50 flex w-full shrink-0 flex-col border-b border-gray-300">
+        {/* <div className="pt-16 pb-8">
           <div className="text-3xl font-bold text-gray-900">
             {AppConfig.title}
           </div>
           <div className="text-xl">{AppConfig.description}</div>
-        </div>
+        </div> */}
         <div>
           <ul className="flex flex-wrap text-xl">
             <li className="mr-6">
@@ -48,20 +48,13 @@ const Main = (props: IMainProps) => (
         </div>
       </div>
 
-      <div className="content py-5 text-xl">{props.children}</div>
+      <div className="mt-5 py-5 text-xl">{props.children}</div>
 
       <div className="border-t border-gray-300 py-8 text-center text-sm">
         © Copyright {new Date().getFullYear()} {AppConfig.title}. Powered with{' '}
         <span role="img" aria-label="Love">
           ♥
         </span>{' '}
-        by <a href="https://creativedesignsguru.com">CreativeDesignsGuru</a>
-        {/*
-         * PLEASE READ THIS SECTION
-         * We'll really appreciate if you could have a link to our website
-         * The link doesn't need to appear on every pages, one link on one page is enough.
-         * Thank you for your support it'll mean a lot for us.
-         */}
       </div>
     </div>
   </div>
