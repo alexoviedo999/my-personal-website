@@ -4,11 +4,11 @@
 
 @layer components {
   .text-color {
-    @apply text-gray-700 dark:text-gray-50;
+    @apply text-gray-50;
   }
 
   .text-color-link {
-    @apply text-gray-700 hover:text-gray-500 dark:text-gray-50;
+    @apply text-gray-50 hover:text-gray-500;
   }
 }
 

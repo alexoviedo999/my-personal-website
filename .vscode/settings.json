@@ -20,5 +20,9 @@
   "[json][jsonc]": {
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "scm.diffDecorationsGutterPattern": {},
+  "workbench.colorCustomizations": {
+    "editorGutter.modifiedBackground": "#406df5"
   }
 }

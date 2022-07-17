@@ -12,13 +12,13 @@ const Main = (props: IMainProps) => (
   <div className="">
     {props.meta}
 
-    <div className="">
-      <div className="fixed z-30 flex h-10 w-full items-center bg-[#15183c] px-5 font-sans shadow-lg sm:h-14">
+    <div className="flex min-h-full flex-col items-stretch">
+      <div className="fixed z-30 h-12 w-full items-center bg-transparent font-sans shadow-lg sm:h-14">
         <div className="hidden">
           <div className="">{AppConfig.title}</div>
           <div className="text-xl">{AppConfig.description}</div>
         </div>
-        <div className="">
+        <div className="shrink-0 py-2 px-5">
           <ul className="flex flex-wrap text-xl">
             <li className="mr-6">
               <Link href="/">
@@ -42,14 +42,7 @@ const Main = (props: IMainProps) => (
         </div>
       </div>
 
-      <div className="py-5 text-xl">{props.children}</div>
-
-      <div className="border-t border-gray-300 py-8 text-center text-sm">
-        © Copyright {new Date().getFullYear()} {AppConfig.title}. Powered with{' '}
-        <span role="img" aria-label="Love">
-          ♥
-        </span>{' '}
-      </div>
+      <div className="text-xl">{props.children}</div>
     </div>
   </div>
 );

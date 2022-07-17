@@ -4,6 +4,7 @@ import NET from 'vanta/dist/vanta.net.min';
 
 import { Meta } from '@/layouts/Meta';
 import { Main } from '@/templates/Main';
+import { AppConfig } from '@/utils/AppConfig';
 
 const Index = () => {
   const [vantaEffect, setVantaEffect] = useState<any>(0);
@@ -36,31 +37,43 @@ const Index = () => {
     >
       <div
         ref={vantaRef}
-        className="fixed -mt-10 flex h-full w-full flex-col justify-center"
+        className="fixed flex h-full w-full grow flex-col justify-between"
       >
-        <div className="relative z-20">
-          <div className="container relative mx-auto flex flex-row flex-wrap justify-center px-6 py-4">
-            <div className="flex-col px-10">
-              <h1 className="text-color mt-5 text-left text-4xl font-semibold drop-shadow-lg">
-                Hello, I am Alejandro Oviedo
-              </h1>
-              <h3 className="text-color text-left font-semibold drop-shadow-lg">
-                I am a front-end developer with with many interests.
-              </h3>
-            </div>
-            <div className="flex-col px-10">
-              <ul>
-                <li className="text-color-link text-[30px] font-semibold drop-shadow-lg">
-                  Skills
-                </li>
-                <li className="text-color-link text-[30px] font-semibold drop-shadow-lg">
-                  Projects
-                </li>
-                <li className="text-color-link text-[30px] font-semibold drop-shadow-lg">
-                  Other Interests
-                </li>
-              </ul>
-            </div>
+        <div className="mt-20 px-5">
+          <h1 className="text-color mt-5 text-left text-4xl font-semibold drop-shadow-lg">
+            Hello, I am Alejandro Oviedo
+          </h1>
+          <h3 className="text-color text-left font-semibold drop-shadow-lg">
+            I am a front-end developer with many interests.
+          </h3>
+        </div>
+        <div className=" z-20 flex grow items-center justify-center">
+          <div className="mx-auto flex-col flex-wrap  px-10">
+            <ul>
+              <li className="text-color-link text-[30px] font-semibold drop-shadow-lg">
+                Skills
+              </li>
+              <li className="text-color-link text-[30px] font-semibold drop-shadow-lg">
+                Projects
+              </li>
+              <li className="text-color-link text-[30px] font-semibold drop-shadow-lg">
+                Other Interests
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div className="flex w-full flex-row justify-between border-t border-gray-500 bg-transparent p-8  shadow-lg sm:h-24">
+          <div className="text-color font-sans text-sm ">
+            © Copyright {new Date().getFullYear()} {AppConfig.title}
+          </div>
+          <div className="text-color text-sm">
+            Developed by Alejandro Oviedo{' '}
+            <span role="img" aria-label="Love">
+              ♥
+            </span>{' '}
+          </div>
+          <div className="text-color text-sm">
+            Powered with Next.js and Three.js
           </div>
         </div>
       </div>
