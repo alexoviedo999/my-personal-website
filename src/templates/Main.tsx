@@ -41,8 +41,21 @@ const Main = (props: IMainProps) => (
           </ul>
         </div>
       </div>
-
       <div className="text-xl">{props.children}</div>
+      <div className="fixed bottom-0 z-20 flex w-full justify-between border-t  border-gray-500 bg-transparent p-6 shadow-lg sm:h-16">
+        <div className="text-color font-sans text-sm ">
+          © Copyright {new Date().getFullYear()} {AppConfig.title}
+        </div>
+        <div className="text-color text-sm">
+          Developed by Alejandro Oviedo{' '}
+          <span role="img" aria-label="Love">
+            ♥
+          </span>{' '}
+        </div>
+        <div className="text-color text-sm">
+          Powered with Next.js and Three.js
+        </div>
+      </div>
     </div>
   </div>
 );
