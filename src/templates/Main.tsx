@@ -12,8 +12,8 @@ const Main = (props: IMainProps) => (
   <div className="">
     {props.meta}
 
-    <div className="flex min-h-full flex-col items-stretch">
-      <div className="navbar fixed top-0 z-50 bg-base-100">
+    <div className="flex min-h-full">
+      <div className="navbar fixed top-0 z-50 border-2 border-base-100/50 bg-base-100/50">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost btn-circle">
@@ -34,7 +34,7 @@ const Main = (props: IMainProps) => (
             </label>
             <ul
               tabIndex={0}
-              className="dropdown-content menu rounded-box menu-compact mt-3 w-52 bg-base-100 p-2 shadow"
+              className="dropdown-content menu rounded-box menu-compact mt-3 w-52 bg-base-100/75 p-2 shadow"
             >
               <li>
                 <Link href="/">
@@ -47,15 +47,17 @@ const Main = (props: IMainProps) => (
                 </Link>
               </li>
               <li>
-                <Link href="/about">
-                  <a>About</a>
+                <Link href="/animations">
+                  <a>Animations</a>
                 </Link>
               </li>
               <li>
                 <a>Portfolio</a>
               </li>
               <li>
-                <a>About</a>
+                <Link href="/about">
+                  <a>About</a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -108,7 +110,7 @@ const Main = (props: IMainProps) => (
 
       <div className="text-xl">{props.children}</div>
 
-      <footer className="footer fixed bottom-0 z-20 items-center p-4 text-neutral-content">
+      <footer className="footer fixed bottom-0 z-20 items-center border-2 border-base-100/50 bg-base-100/25 p-4 text-neutral-content">
         <div className="grid-flow-col items-center">
           <p>
             © Copyright {new Date().getFullYear()} {AppConfig.title}

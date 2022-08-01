@@ -73,11 +73,11 @@ function Dots() {
   );
 }
 
-export default function Animaton() {
+export default function Animaton1() {
   return (
     <div className="scene">
       <Canvas orthographic camera={{ zoom: 20 }}>
-        <color attach="background" args={['black']} />
+        <color attach="background" args={['blue']} />
         <Dots />
       </Canvas>
     </div>

@@ -1,7 +1,7 @@
 import { Meta } from '@/layouts/Meta';
 import { Main } from '@/templates/Main';
 
-import Animaton from './animation';
+import Animaton1 from './animations/animation1';
 
 const Skills = () => {
   return (
@@ -13,13 +13,14 @@ const Skills = () => {
         />
       }
     >
-      <Animaton></Animaton>
-      <div className="fixed top-0 flex h-full w-full items-center justify-center">
+      <Animaton1></Animaton1>
+      <div className="fixed top-0 flex h-full w-full flex-col items-center justify-center">
+        <h1 className="text-4xl">My Skills</h1>
         <section className="z-10 overflow-hidden text-gray-700">
           <div className="container mx-auto px-5 py-2 lg:px-32 lg:pt-12">
             <div className="-m-1 flex max-w-xl flex-wrap md:-m-2">
               <div className="flex w-1/3 flex-wrap">
-                <div className="m-1 w-full bg-white md:p-2">
+                <div className="m-1 w-full bg-transparent md:p-2">
                   <img
                     className="block h-full w-full rounded-lg object-contain object-center"
                     src="/js_logo.svg"
@@ -28,7 +29,7 @@ const Skills = () => {
                 </div>
               </div>
               <div className="flex w-1/3 flex-wrap">
-                <div className="m-1 w-full bg-white p-1 md:p-2">
+                <div className="m-1 w-full bg-transparent p-1 md:p-2">
                   <img
                     alt="HTML 5 Logo"
                     className="block h-full w-full rounded-lg object-contain object-center"
@@ -37,7 +38,7 @@ const Skills = () => {
                 </div>
               </div>
               <div className="flex w-1/3 flex-wrap">
-                <div className="m-1 w-full bg-white p-1 md:p-2">
+                <div className="m-1 w-full bg-transparent p-1 md:p-2">
                   <img
                     alt="CSS 3 Logo"
                     className="block h-full w-full rounded-lg object-contain object-center"
@@ -46,7 +47,7 @@ const Skills = () => {
                 </div>
               </div>
               <div className="flex w-1/3 flex-wrap">
-                <div className="m-1 w-full bg-white p-1 md:p-2">
+                <div className="m-1 w-full bg-transparent p-1 md:p-2">
                   <img
                     alt="gallery"
                     className="block h-full w-full rounded-lg object-contain object-center"
@@ -55,7 +56,7 @@ const Skills = () => {
                 </div>
               </div>
               <div className="flex w-1/3 flex-wrap">
-                <div className="m-1 w-full bg-white p-1 md:p-2">
+                <div className="m-1 w-full bg-transparent p-1 md:p-2">
                   <img
                     alt="gallery"
                     className="block h-full w-full rounded-lg object-contain object-center"
@@ -64,7 +65,7 @@ const Skills = () => {
                 </div>
               </div>
               <div className="flex w-1/3 flex-wrap">
-                <div className="m-1 w-full bg-white p-1 md:p-2">
+                <div className="m-1 w-full bg-transparent p-1 md:p-2">
                   <img
                     alt="gallery"
                     className="block h-full w-full rounded-lg object-cover object-center"

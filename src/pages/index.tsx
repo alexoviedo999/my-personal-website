@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { Meta } from '@/layouts/Meta';
 import { Main } from '@/templates/Main';
 
-import Animaton from './animation';
+import Animation1 from './animations/animation1';
 
 const Index = () => {
   return (
@@ -15,7 +15,7 @@ const Index = () => {
         />
       }
     >
-      <Animaton></Animaton>
+      <Animation1></Animation1>
       <div className="hero min-h-screen bg-base-200">
         <div className="hero-content text-center">
           <div className="max-w-3xl">
@@ -34,7 +34,7 @@ const Index = () => {
                   </Link>
                 </span>
                 <span>
-                  <Link href="/animation">
+                  <Link href="/animations">
                     <a className="link-hover border-none"> animations,</a>
                   </Link>
                 </span>
@@ -45,7 +45,7 @@ const Index = () => {
                 </span>
                 <span>and</span>
                 <span>
-                  <Link href="/animation">
+                  <Link href="/animations">
                     <a className="link-hover border-none"> other interests.</a>
                   </Link>
                 </span>
