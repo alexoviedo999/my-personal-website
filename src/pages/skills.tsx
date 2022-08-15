@@ -4,6 +4,7 @@ import { Main } from '@/templates/Main';
 import Animaton1 from './animations/animation1';
 
 const Skills = () => {
+  // TODO: refactor with flexbox and Daisy figures to make more responsive
   return (
     <Main
       meta={

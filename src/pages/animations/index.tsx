@@ -16,13 +16,14 @@ const animationItems = [
   },
 ];
 
-interface Animation {
+type Animation = {
   image: string;
   title: string;
   url: string;
-}
+};
 
 function CardList() {
+  // TODO: add more animation figures
   const cards = animationItems.map((animationItem: Animation) => (
     <li
       key={animationItem.title}
