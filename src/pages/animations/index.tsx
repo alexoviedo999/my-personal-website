@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 import { Meta } from '@/layouts/Meta';
 import { Main } from '@/templates/Main';
 
@@ -7,12 +9,17 @@ const animationItems = [
   {
     image: '../../animation-screenshots/animation1.png',
     title: 'Animation 1',
-    url: './animation1',
+    url: './animations/animation1',
   },
   {
     image: '../../animation-screenshots/animation2.png',
     title: 'Animation 2',
-    url: './animation2',
+    url: './animations/animation2',
+  },
+  {
+    image: '../../animation-screenshots/animation3.png',
+    title: 'Animation 3',
+    url: './animations/animation3',
   },
 ];
 
@@ -27,14 +34,16 @@ function CardList() {
   const cards = animationItems.map((animationItem: Animation) => (
     <li
       key={animationItem.title}
-      className="card card-compact m-4 bg-base-100 shadow-xl sm:m-2 md:basis-1/3 lg:basis-1/4"
+      className="card card-compact m-4 bg-base-100 shadow-xl sm:m-8 md:basis-1/3 lg:basis-1/4"
     >
       <figure>
-        <img
-          className="w-full"
-          src={animationItem.image}
-          alt="Animation Card"
-        />
+        <Link className="" href={animationItem.url}>
+          <img
+            className="w-full cursor-pointer"
+            src={animationItem.image}
+            alt="Animation Card"
+          />
+        </Link>
       </figure>
       <div className="card-body">
         <h2 className="card-title">{animationItem.title}</h2>
@@ -60,11 +69,14 @@ const AnimationsIndex = () => {
       }
     >
       <Animation1></Animation1>
-      <div className="z-50 mt-24 flex basis-full flex-col items-center justify-evenly">
-        <h1 className="text-4xl">Animations</h1>
-        <CardList />
+      <div className="absolute mt-16">
+        <div className="relative flex flex-col">
+          <h1 className="m-4 text-center text-4xl">Animations</h1>
+        </div>
+        <div className="relative z-20 mt-12 items-center justify-evenly">
+          <CardList />
+        </div>
       </div>
-      <div className=""></div>
     </Main>
   );
 };

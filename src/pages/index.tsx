@@ -16,7 +16,7 @@ const Index = () => {
       }
     >
       <Animation1></Animation1>
-      <div className="hero min-h-screen bg-base-200">
+      <div className="hero min-h-screen">
         <div className="hero-content text-center">
           <div className="max-w-3xl">
             <div className="z-50 mt-20 px-5">

@@ -12,8 +12,8 @@ const Main = (props: IMainProps) => (
   <div className="">
     {props.meta}
 
-    <div className="flex min-h-full">
-      <div className="navbar fixed top-0 z-50 border-2 border-base-100/50 bg-base-100/50">
+    <div className="min-h-full bg-black">
+      <div className="navbar fixed top-0 z-50 border-2 border-base-100/50 bg-base-100">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost btn-circle">
@@ -71,7 +71,7 @@ const Main = (props: IMainProps) => (
           </Link>
         </div>
         <div className="navbar-end">
-          <div className="flex-none items-center">
+          <div className="order-1 items-center">
             <a
               aria-label="Github"
               target="_blank"
@@ -90,22 +90,41 @@ const Main = (props: IMainProps) => (
               </svg>
             </a>
           </div>
+          <div className="order-2 items-center">
+            <a
+              aria-label="Twitter"
+              target="_blank"
+              href="https://twitter.com/alexoviedo999"
+              rel="noopener noreferrer"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                className="fill-current"
+              >
+                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path>
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
 
       <div className="text-xl">{props.children}</div>
 
-      <footer className="footer fixed bottom-0 z-20 items-center border-2 border-base-100/50 bg-base-100/25 p-4 text-neutral-content">
-        <div className="grid-flow-col items-center">
+      <footer className="footer fixed bottom-0 z-50 flex flex-row items-center justify-between border-2 border-base-100/50 bg-base-100 p-4 text-neutral-content sm:gap-y-0">
+        <div className="">
           <p>
             © Copyright {new Date().getFullYear()} {AppConfig.title}
           </p>
         </div>
-        <div>
+        {/* <div className="hidden grid-flow-col items-center sm:block">
           <p>Powerd by Next.js & React Three Fiber</p>
-        </div>
+        </div> */}
 
-        <div className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
+        <div className="hidden gap-4 sm:block">
+          <p>Powerd by Next.js & React Three Fiber</p>
           {/* TODO: add contact and about me page then uncomment links below */}
           {/* <div>
             <a className="link-hover link">Contact</a>
@@ -113,22 +132,6 @@ const Main = (props: IMainProps) => (
           <div>
             <a className="link-hover link">About Me</a>
           </div> */}
-          <a
-            aria-label="Twitter"
-            target="_blank"
-            href="https://twitter.com/alexoviedo999"
-            rel="noopener noreferrer"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              className="fill-current"
-            >
-              <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path>
-            </svg>
-          </a>
         </div>
       </footer>
     </div>
