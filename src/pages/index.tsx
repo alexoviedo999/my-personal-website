@@ -27,7 +27,13 @@ const Index = () => {
                 I am a front-end developer that enjoys making cool things happen
                 on screens.
                 <br />
-                Feel free to check out my
+                Feel free to find out more
+                <span>
+                  <Link href="/about">
+                    <a className="link-hover border-none"> about me, </a>
+                  </Link>
+                </span>
+                or check out my
                 <span>
                   <Link href="/skills">
                     <a className="link-hover border-none"> tech skills,</a>

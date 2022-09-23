@@ -41,3 +41,13 @@ a:hover {
 .canvas{
   background: #000;
 }
+
+input:-webkit-autofill {
+    -webkit-box-shadow:0 0 0 50px hsl(var(--b1) / var(--tw-bg-opacity)) inset; /* Change the color to your own background color */
+    -webkit-text-fill-color: rgb(107 114 128);
+}
+
+input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0 50px hsl(var(--b1) / var(--tw-bg-opacity)) inset;/*your box-shadow*/
+    -webkit-text-fill-color: rgb(107 114 128);
+} 
