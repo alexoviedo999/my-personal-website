@@ -5,7 +5,7 @@ const Sketch = dynamic(() => import('react-p5').then((mod) => mod.default), {
   ssr: false,
 });
 
-const Sketch1 = () => {
+const Moire1 = () => {
   const setup = (p5) => {
     const canvas = p5.createCanvas(p5.windowWidth, p5.windowHeight);
     canvas.position(0, 0);
@@ -40,4 +40,4 @@ const Sketch1 = () => {
   );
 };
 
-export default Sketch1;
+export default Moire1;

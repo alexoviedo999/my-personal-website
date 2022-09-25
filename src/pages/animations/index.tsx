@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 import { Meta } from '@/layouts/Meta';
@@ -7,22 +8,27 @@ import Animation1 from './animation1';
 
 const animationItems = [
   {
-    image: '../../animation-screenshots/moire-1.png',
+    image: '/animation-screenshots/moire-1.png',
     title: 'Square Moire',
     url: './animations/moire-1',
   },
   {
-    image: '../../animation-screenshots/animation2.png',
+    image: '/animation-screenshots/spirographs.png',
+    title: 'Spirographs',
+    url: './animations/spirographs',
+  },
+  {
+    image: '/animation-screenshots/animation2.png',
     title: 'Circle Snake',
     url: './animations/animation2',
   },
   {
-    image: '../../animation-screenshots/animation1.png',
+    image: '/animation-screenshots/animation1.png',
     title: 'Animation 1',
     url: './animations/animation1',
   },
   {
-    image: '../../animation-screenshots/animation3.png',
+    image: '/animation-screenshots/animation3.png',
     title: 'Animation 3',
     url: './animations/animation3',
   },
@@ -43,10 +49,11 @@ function CardList() {
     >
       <figure>
         <Link className="" href={animationItem.url}>
-          <img
-            className="w-full cursor-pointer"
+          <Image
             src={animationItem.image}
             alt="Animation Card"
+            width={500}
+            height={500}
           />
         </Link>
       </figure>
