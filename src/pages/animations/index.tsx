@@ -7,14 +7,19 @@ import Animation1 from './animation1';
 
 const animationItems = [
   {
-    image: '../../animation-screenshots/animation1.png',
-    title: 'Animation 1',
-    url: './animations/animation1',
+    image: '../../animation-screenshots/moire-1.png',
+    title: 'Square Moire',
+    url: './animations/moire-1',
   },
   {
     image: '../../animation-screenshots/animation2.png',
-    title: 'Animation 2',
+    title: 'Circle Snake',
     url: './animations/animation2',
+  },
+  {
+    image: '../../animation-screenshots/animation1.png',
+    title: 'Animation 1',
+    url: './animations/animation1',
   },
   {
     image: '../../animation-screenshots/animation3.png',
@@ -47,7 +52,6 @@ function CardList() {
       </figure>
       <div className="card-body">
         <h2 className="card-title">{animationItem.title}</h2>
-        <p>If a dog chews shoes whose shoes does he choose?</p>
       </div>
     </li>
   ));
