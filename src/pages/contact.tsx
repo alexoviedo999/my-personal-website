@@ -31,15 +31,12 @@ const Contact = () => {
         />
       }
     >
-      <div
-        className="flex h-screen flex-col 
-      items-center justify-center"
-      >
-        <div className="mb-16 pt-0">
+      <div className="min-h-screen">
+        <div className="mb-10 flex flex-col items-center justify-center pt-40">
           <h2 className="text-center text-3xl text-gray-500">Contact Me</h2>
         </div>
-        <div className="flex">
-          <div className="order-1 mt-20 mr-8 ml-28 flex-none items-center">
+        <div className="flex flex-col items-center justify-center md:flex-row">
+          <div className="order-1 items-center md:mr-8 md:ml-28 md:flex-row">
             <a
               aria-label="Linkedin"
               target="_blank"
@@ -57,7 +54,7 @@ const Contact = () => {
               </svg>
             </a>
           </div>
-          <div className="order-2 flex-none items-center border-l-2 border-gray-600">
+          <div className="order-2 mt-5 items-center border-t-2 border-gray-600 md:border-t-0 md:border-l-2">
             <form
               className="mb-4 rounded px-8 pt-6 pb-8 shadow-md"
               action={FORM_ENDPOINT}

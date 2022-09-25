@@ -19,8 +19,8 @@ const Index = () => {
       <div className="hero min-h-screen">
         <div className="hero-content text-center">
           <div className="max-w-3xl">
-            <div className="z-50 mt-20 px-5">
-              <h1 className="mt-5 text-left text-5xl font-semibold drop-shadow-lg">
+            <div className="z-50 mt-5 px-5">
+              <h1 className=" text-left text-3xl font-semibold drop-shadow-lg md:text-5xl">
                 Hello, I am Alejandro Oviedo
               </h1>
               <h2 className="text-left font-semibold drop-shadow-lg">

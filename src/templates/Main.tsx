@@ -60,6 +60,11 @@ const Main = (props: IMainProps) => (
                   <a>About</a>
                 </Link>
               </li>
+              <li>
+                <Link href="/contact">
+                  <a>Contact Me</a>
+                </Link>
+              </li>
             </ul>
           </div>
         </div>

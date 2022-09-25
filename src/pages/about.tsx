@@ -16,14 +16,14 @@ const About = () => {
       <div className="hero min-h-screen">
         <div className="hero-content text-center">
           <div className="max-w-3xl">
-            <div className="z-50 mt-20 px-5">
+            <div className="z-50 my-20 px-5">
               <h1 className="mt-5 text-left text-5xl font-semibold drop-shadow-lg">
                 Hello...
               </h1>
-              <h2 className="text-left font-semibold drop-shadow-lg">
+              <p className="text-left font-semibold drop-shadow-lg">
                 I am a front-end developer with a passion for many things
                 including software development, art, music, and geopolitics.
-              </h2>
+              </p>
               <br />
               <p className="text-left">
                 I&apos;ve been developing professionally for the last 11 years.
