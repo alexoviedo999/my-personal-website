@@ -18,9 +18,14 @@ const animationItems = [
     url: './animations/spirographs',
   },
   {
-    image: '/animation-screenshots/animation2.png',
+    image: '/animation-screenshots/tri-twister.png',
+    title: 'Tri-twister',
+    url: './animations/tri-twister/',
+  },
+  {
+    image: '/animation-screenshots/circle-snake.png',
     title: 'Circle Snake',
-    url: './animations/animation2',
+    url: './animations/noc/noc-i-05/',
   },
   {
     image: '/animation-screenshots/animation1.png',
@@ -49,12 +54,14 @@ function CardList() {
     >
       <figure>
         <Link className="" href={animationItem.url}>
-          <Image
-            src={animationItem.image}
-            alt="Animation Card"
-            width={500}
-            height={500}
-          />
+          <a>
+            <Image
+              src={animationItem.image}
+              alt="Animation Card"
+              width={500}
+              height={500}
+            />
+          </a>
         </Link>
       </figure>
       <div className="card-body">
