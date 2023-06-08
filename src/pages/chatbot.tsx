@@ -15,7 +15,7 @@ const Chatbot = () => {
         />
       }
     >
-      <div className="fixed top-0 flex h-full w-full flex-col items-center justify-center">
+      <div className="flex h-full flex-col overflow-y-auto">
         <h1 className="text-center text-4xl">Jerky Boy Bot</h1>
         <div className="hero-content">
           <MessagesProvider>

@@ -8,15 +8,18 @@ const MessageForm = () => {
   const { addMessage } = useMessages();
 
   const handleSubmit = async (e: any) => {
-    e?.preventDefault();
-    addMessage(content);
-    setContent('');
+    if (e.key === 'Enter' || e.type === 'submit') {
+      e?.preventDefault();
+      addMessage(content);
+      setContent('');
+    }
   };
 
   return (
     <form
       className="relative mx-auto max-w-3xl rounded-t-xl"
       onSubmit={handleSubmit}
+      onKeyDown={handleSubmit}
     >
       <div className="h-[130px] border-2 border-red-500 backdrop-blur dark:border-gray-50/[0.06]">
         <label htmlFor="content" className="sr-only">

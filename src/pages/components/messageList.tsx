@@ -4,7 +4,7 @@ const MessagesList = () => {
   const { messages, isLoadingAnswer } = useMessages();
 
   return (
-    <div className="mx-auto max-w-3xl pt-8">
+    <div className="m-[120px] mx-auto max-w-3xl">
       {messages?.map((message, i) => {
         const isUser = message.role === 'user';
         if (message.role === 'system') return null;
@@ -19,7 +19,7 @@ const MessagesList = () => {
             {!isUser && (
               <img
                 src="/Flag_of_Tar_Valon.svg"
-                className="h-9 w-9 cursor-pointer rounded-full bg-white fill-red-500"
+                className="h-9 w-9 cursor-pointer rounded-full bg-white"
                 alt="avatar"
               />
             )}
@@ -27,7 +27,7 @@ const MessagesList = () => {
               style={{ maxWidth: 'calc(100% - 45px)' }}
               className={`group relative rounded-lg px-3 py-2 ${
                 isUser
-                  ? 'from-primary-700 to-primary-600 mr-2 bg-gradient-to-br text-white'
+                  ? 'mr-2 bg-gradient-to-br from-indigo-700 to-indigo-600 text-white'
                   : 'ml-2 bg-gray-200 text-gray-700 dark:bg-gray-800 dark:text-gray-200'
               }`}
             >
