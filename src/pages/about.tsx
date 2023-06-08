@@ -21,42 +21,46 @@ const About = () => {
                 Hello...
               </h1>
               <p className="text-left font-semibold drop-shadow-lg">
-                I am a front-end developer with a passion for many things
-                including software development, art, music, and geopolitics.
+                I&apos;m a seasoned Front-End Developer with over a decade of
+                professional experience in the tech industry. My passion extends
+                beyond software development, reaching into the realms of art,
+                music, and geopolitics.
               </p>
               <br />
               <p className="text-left">
-                I&apos;ve been developing professionally for the last 11 years.
-                For the last 5 years I&apos;ve worked at Visa as a Software
-                Engineer. My focus is on innovating Visa&apos;s online
-                &quot;Click to Pay&quot; Secure Remote Commerce platform. Click
-                to Pay is used by an international market of over 60 million
-                users. I love working closely with teams of product managers,
-                project managers, designers, and quality assurance in multiple
-                time zones to deliver an international, industry wide, commerce
-                platform.
+                For the past five years, I&apos;ve been an integral part of
+                Visa&apos;s software engineering team, focusing on the
+                innovation of the &quot;Click to Pay&quot; Secure Remote
+                Commerce platform. This platform, used by an international
+                market of over 60 million users, has been a testament to my love
+                for working in diverse, multi-disciplinary teams. Together,
+                we&apos;ve delivered an industry-wide commerce platform that
+                transcends borders and time zones.
               </p>
               <br />
               <p className="text-left">
-                I love taking on a challenging projects and by means of hard
-                work, teamwork, and excellent technical skills, making them
-                successful. I&apos;m motivated to learn, grow and excel as a
-                front-end developer while using Agile principles to iteratively
-                deliver value users will love.
+                I thrive on challenges and believe in the power of hard work,
+                teamwork, and technical prowess to turn complex projects into
+                successful ventures. My goal is to continually learn, grow, and
+                excel as a Front-End Developer, using Agile principles to
+                deliver value that users will love, iteration after iteration.
               </p>
               <br />
               <p className="text-left">
-                Originally from NY, I currently live in the Austin, TX area with
-                my wonderful wife and twin kids. I love appreciating and making
-                art, and in particular Generative art. I also love house, and
-                techno music, and I&apos;m a pretty decent DJ too.
+                On a personal note, I&apos;m a New York native currently
+                residing in the vibrant city of Austin, Texas, with my wonderful
+                wife and our twin children. When I&apos;m not coding, I&apos;m
+                exploring my artistic side through Generative Art, spinning
+                house and techno tracks as a DJ, or simply enjoying life&apos;s
+                rhythm with my family.
               </p>
               <br />
               <p className="text-left">
-                I would love to hear from you, feel free to
+                I&apos;m always open to new opportunities and connections. Feel
+                free to
                 <span>
                   <Link href="/contact">
-                    <a className="link-hover border-none"> contact me.</a>
+                    <a className="link-hover border-none"> contact me!</a>
                   </Link>
                 </span>
               </p>
