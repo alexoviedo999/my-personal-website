@@ -40,6 +40,11 @@ const Index = () => {
                   </Link>
                 </span>
                 <span>
+                  <Link href="/chatbot">
+                    <a className="link-hover border-none"> Jerky Boy Bot,</a>
+                  </Link>
+                </span>
+                <span>
                   <Link href="/animations">
                     <a className="link-hover border-none"> animations,</a>
                   </Link>

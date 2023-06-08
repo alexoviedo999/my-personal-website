@@ -51,6 +51,11 @@ const Main = (props: IMainProps) => (
                   <a>Animations</a>
                 </Link>
               </li>
+              <li>
+                <Link href="/chatbot">
+                  <a>Jerky Boy Bot</a>
+                </Link>
+              </li>
               {/* TODO: add portfolio and about sections then uncomment below links */}
               {/* <li>
                 <a>Portfolio</a>
