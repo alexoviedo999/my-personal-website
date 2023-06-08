@@ -49,17 +49,17 @@ const Index = () => {
                     <a className="link-hover border-none"> animations,</a>
                   </Link>
                 </span>
+                <span> and</span>
                 <span>
                   <Link href="https://github.com/alexoviedo999">
-                    <a className="link-hover border-none"> github, </a>
+                    <a className="link-hover border-none"> github </a>
                   </Link>
                 </span>
-                <span>and</span>
-                <span>
+                {/* <span>
                   <Link href="/animations">
                     <a className="link-hover border-none"> other interests.</a>
                   </Link>
-                </span>
+                </span> */}
               </h2>
             </div>
           </div>
