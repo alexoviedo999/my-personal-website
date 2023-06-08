@@ -141,9 +141,9 @@ const Main = (props: IMainProps) => (
         </div>
       </div>
 
-      <div className="text-xl">{props.children}</div>
+      <div className="text-lg">{props.children}</div>
 
-      <footer className="footer fixed bottom-0 z-50 flex flex-row items-center justify-between border-2 border-base-100/50 bg-base-100 p-4 text-neutral-content sm:gap-y-0">
+      <footer className="footer fixed bottom-0 z-50 flex flex-row items-center justify-between border-2 border-base-100/50 bg-base-100 p-1 text-xs text-neutral-content sm:gap-y-0">
         <div className="">
           <p>
             © Copyright {new Date().getFullYear()} {AppConfig.title}
