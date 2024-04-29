@@ -25,6 +25,7 @@
     "@react-three/postprocessing": "^2.5.5",
     "@types/p5": "^1.4.2",
     "daisyui": "^2.20.0",
+    "flowise-embed-react": "^1.0.2",
     "next": "^12.2.0",
     "next-seo": "^5.4.0",
     "openai": "^3.2.1",
