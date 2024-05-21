@@ -19,7 +19,7 @@ const FlipsideBot = () => {
             <div className="z-50 my-20 px-5">
               <div className="flex justify-center">
                 <img
-                  src="/psychedelic-dolphin-no-bg.png"
+                  src="/Psychedelic-dolphin-no-bg.png"
                   className="h-60 w-60 justify-center rounded-full"
                   alt="avatar"
                 />
