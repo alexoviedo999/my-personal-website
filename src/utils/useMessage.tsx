@@ -1,11 +1,11 @@
-import type { ChatCompletionRequestMessage } from 'openai';
+import type { ChatCompletionMessageParam } from 'openai/resources/chat/completions';
 import type { ReactNode } from 'react';
 import { createContext, useContext, useEffect, useState } from 'react';
 
 import { sendMessage } from './sendMessage';
 
 interface ContextProps {
-  messages: ChatCompletionRequestMessage[];
+  messages: ChatCompletionMessageParam[];
   addMessage: (content: string) => Promise<void>;
   isLoadingAnswer: boolean;
 }
@@ -14,17 +14,17 @@ const ChatsContext = createContext<Partial<ContextProps>>({});
 
 export function MessagesProvider({ children }: { children: ReactNode }) {
   // const { addToast } = useToast();
-  const [messages, setMessages] = useState<ChatCompletionRequestMessage[]>([]);
+  const [messages, setMessages] = useState<ChatCompletionMessageParam[]>([]);
   const [isLoadingAnswer, setIsLoadingAnswer] = useState(false);
 
   useEffect(() => {
     const initializeChat = () => {
-      const systemMessage: ChatCompletionRequestMessage = {
+      const systemMessage: ChatCompletionMessageParam = {
         role: 'system',
         content:
           'Act like a Jerky Boy. I would like you to talk and answer all questions as if you were a Jerky Boy on a prank call.  Please be as rude and as jerky as possible while still being humorous.  Do your best to capture the essence and the humor that the Jerky Boys are known for.  Push my buttons and mess with me.',
       };
-      const welcomeMessage: ChatCompletionRequestMessage = {
+      const welcomeMessage: ChatCompletionMessageParam = {
         role: 'assistant',
         content:
           "What's your question hotshot? And make it snappy, I ain't got all day!",
@@ -42,7 +42,7 @@ export function MessagesProvider({ children }: { children: ReactNode }) {
   const addMessage = async (content: string) => {
     setIsLoadingAnswer(true);
     try {
-      const newMessage: ChatCompletionRequestMessage = {
+      const newMessage: ChatCompletionMessageParam = {
         role: 'user',
         content,
       };
@@ -56,7 +56,7 @@ export function MessagesProvider({ children }: { children: ReactNode }) {
 
       // Add the assistant message to the state
       setMessages([...newMessages, reply]);
-    } catch (error) {
+    } catch (_error) {
       // Show error when something goes wrong
       // addToast({ title: 'An error occurred', type: 'error' });
     } finally {

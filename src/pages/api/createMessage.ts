@@ -2,7 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default async function createMessage(
   req: NextApiRequest,
-  res: NextApiResponse
+  res: NextApiResponse,
 ) {
   const { messages } = req.body;
   const url = 'https://api.openai.com/v1/chat/completions';
@@ -24,7 +24,7 @@ export default async function createMessage(
     });
     const data = await response.json();
     res.status(200).json({ data });
-  } catch (error) {
+  } catch (_error) {
     res.status(500).json({ error: 'error' });
     // res.status(500).json({ error: error.message });
   }

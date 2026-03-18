@@ -37,47 +37,29 @@ const Main = (props: IMainProps) => (
               className="dropdown-content menu rounded-box menu-compact mt-3 w-52 bg-base-100/75 p-2 shadow"
             >
               <li>
-                <Link href="/">
-                  <a>Home</a>
-                </Link>
+                <Link href="/">Home</Link>
               </li>
               <li>
-                <Link href="/skills">
-                  <a>Skills</a>
-                </Link>
+                <Link href="/skills">Skills</Link>
               </li>
               <li>
-                <Link href="/animations">
-                  <a>Animations</a>
-                </Link>
+                <Link href="/animations">Animations</Link>
               </li>
               <li>
-                <Link href="/chatbot">
-                  <a>Jerky Boy Bot</a>
-                </Link>
-              </li>
-              {/* TODO: add portfolio and about sections then uncomment below links */}
-              {/* <li>
-                <a>Portfolio</a>
-              </li> */}
-              <li>
-                <Link href="/about">
-                  <a>About</a>
-                </Link>
+                <Link href="/chatbot">Jerky Boy Bot</Link>
               </li>
               <li>
-                <Link href="/contact">
-                  <a>Contact Me</a>
-                </Link>
+                <Link href="/about">About</Link>
+              </li>
+              <li>
+                <Link href="/contact">Contact Me</Link>
               </li>
             </ul>
           </div>
         </div>
         <div className="navbar-center">
-          <Link href="/">
-            <a className="btn btn-ghost text-xl normal-case">
-              Alejandro Oviedo
-            </a>
+          <Link href="/" className="btn btn-ghost text-xl normal-case">
+            Alejandro Oviedo
           </Link>
         </div>
         <div className="navbar-end">

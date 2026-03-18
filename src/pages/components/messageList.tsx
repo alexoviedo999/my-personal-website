@@ -3,18 +3,27 @@ import { useMessages } from '../../utils/useMessage';
 const MessagesList = () => {
   const { messages, isLoadingAnswer } = useMessages();
 
+  const getMessageContent = (
+    content: string | null | undefined | unknown[],
+  ): string => {
+    if (content === null || content === undefined) return '';
+    if (typeof content === 'string') return content;
+    return JSON.stringify(content);
+  };
+
   return (
     <div className="m-[120px] mx-auto max-w-3xl">
       {messages?.map((message, i) => {
         const isUser = message.role === 'user';
         if (message.role === 'system') return null;
+        const messageContent = getMessageContent(message.content);
         return (
           <div
             id={`message-${i}`}
             className={`fade-up mb-2 flex ${
               isUser ? 'justify-end' : 'justify-start'
             } ${i === 1 ? 'max-w-md' : ''}`}
-            key={message.content}
+            key={`message-${i}`}
           >
             {!isUser && (
               <img
@@ -31,7 +40,7 @@ const MessagesList = () => {
                   : 'ml-2 bg-gray-200 text-gray-700 dark:bg-gray-800 dark:text-gray-200'
               }`}
             >
-              {message.content.trim()}
+              {messageContent.trim()}
             </div>
             {isUser && (
               <img

@@ -9,7 +9,7 @@ describe('Main template', () => {
 
       const menuItemList = screen.getAllByRole('listitem');
 
-      expect(menuItemList).toHaveLength(3);
+      expect(menuItemList).toHaveLength(6);
     });
   });
 });

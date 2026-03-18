@@ -23,6 +23,11 @@ const animationItems = [
     url: './animations/tri-twister/',
   },
   {
+    image: '/animation-screenshots/nautilus.png',
+    title: 'Nautilus',
+    url: './animations/nautilus/',
+  },
+  {
     image: '/animation-screenshots/circle-snake.png',
     title: 'Circle Snake',
     url: './animations/noc/noc-i-05/',
@@ -54,14 +59,12 @@ function CardList() {
     >
       <figure>
         <Link className="" href={animationItem.url}>
-          <a>
-            <Image
-              src={animationItem.image}
-              alt="Animation Card"
-              width={500}
-              height={500}
-            />
-          </a>
+          <Image
+            src={animationItem.image}
+            alt="Animation Card"
+            width={500}
+            height={500}
+          />
         </Link>
       </figure>
       <div className="card-body">

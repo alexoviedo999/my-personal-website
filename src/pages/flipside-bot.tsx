@@ -1,7 +1,12 @@
-import { BubbleChat } from 'flowise-embed-react';
+import dynamic from 'next/dynamic';
 
 import { Meta } from '@/layouts/Meta';
 import { Main } from '@/templates/Main';
+
+const BubbleChat = dynamic(
+  () => import('flowise-embed-react').then((mod) => mod.BubbleChat),
+  { ssr: false },
+);
 
 const FlipsideBot = () => {
   return (

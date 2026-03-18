@@ -29,30 +29,38 @@ const Index = () => {
                 <br />
                 Feel free to find out more
                 <span>
-                  <Link href="/about">
-                    <a className="link-hover border-none"> about me, </a>
+                  <Link href="/about" className="link-hover border-none">
+                    {' '}
+                    about me,{' '}
                   </Link>
                 </span>
                 or check out my
                 <span>
-                  <Link href="/skills">
-                    <a className="link-hover border-none"> tech skills,</a>
+                  <Link href="/skills" className="link-hover border-none">
+                    {' '}
+                    tech skills,
                   </Link>
                 </span>
                 <span>
-                  <Link href="/chatbot">
-                    <a className="link-hover border-none"> Jerky Boy Bot,</a>
+                  <Link href="/chatbot" className="link-hover border-none">
+                    {' '}
+                    Jerky Boy Bot,
                   </Link>
                 </span>
                 <span>
-                  <Link href="/animations">
-                    <a className="link-hover border-none"> animations,</a>
+                  <Link href="/animations" className="link-hover border-none">
+                    {' '}
+                    animations,
                   </Link>
                 </span>
                 <span> and</span>
                 <span>
-                  <Link href="https://github.com/alexoviedo999">
-                    <a className="link-hover border-none"> github </a>
+                  <Link
+                    href="https://github.com/alexoviedo999"
+                    className="link-hover border-none"
+                  >
+                    {' '}
+                    github{' '}
                   </Link>
                 </span>
                 {/* <span>

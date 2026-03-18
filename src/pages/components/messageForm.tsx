@@ -27,11 +27,10 @@ const MessageForm = () => {
         </label>
         <TextArea
           name="content"
-          placeholder="Enter your message here..."
           rows={3}
           value={content}
           autoFocus
-          className="text-gray-900 shadow-none backdrop-blur focus:outline-none focus:ring-gray-300/80 dark:bg-gray-800/80 dark:text-white dark:ring-0 dark:placeholder:text-gray-400"
+          className="text-gray-900 shadow-none backdrop-blur focus:outline-none focus:ring-gray-300/80 dark:bg-gray-800/80 dark:text-white dark:ring-0"
           onChange={(e: any) => setContent(e.target.value)}
         />
         <div className="absolute right-8 bottom-10">

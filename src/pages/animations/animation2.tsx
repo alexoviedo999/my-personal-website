@@ -67,7 +67,7 @@ function Dots() {
   });
   return (
     <instancedMesh ref={ref} args={[null, null, 10000]}>
-      <circleBufferGeometry args={[0.15]} />
+      <circleGeometry args={[0.15]} />
       <meshBasicMaterial />
     </instancedMesh>
   );

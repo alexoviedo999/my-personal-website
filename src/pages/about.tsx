@@ -59,8 +59,9 @@ const About = () => {
                 I&apos;m always open to new opportunities and connections. Feel
                 free to
                 <span>
-                  <Link href="/contact">
-                    <a className="link-hover border-none"> contact me!</a>
+                  <Link href="/contact" className="link-hover border-none">
+                    {' '}
+                    contact me!
                   </Link>
                 </span>
               </p>

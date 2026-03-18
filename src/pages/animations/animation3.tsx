@@ -1,5 +1,5 @@
 import { MapControls, OrbitControls, Stats } from '@react-three/drei';
-import { Canvas, useFrame, useThree } from '@react-three/fiber';
+import { Canvas, useFrame } from '@react-three/fiber';
 import React, { useRef } from 'react';
 import type { Mesh } from 'three';
 import { DoubleSide, PerspectiveCamera } from 'three';
@@ -25,13 +25,8 @@ const Torus = () => {
 
 function Controls() {
   const ref = useRef<OrbitControlsImpl>(null);
-  const {
-    camera,
-    gl: { domElement },
-  } = useThree();
-
-  // return <orbitControls args={[camera, domElement]} />;
-  return <OrbitControls ref={ref} args={[camera, domElement]} />;
+  // OrbitControls automatically gets camera and gl from useThree() internally
+  return <OrbitControls ref={ref} />;
 }
 
 function CameraHelper() {
