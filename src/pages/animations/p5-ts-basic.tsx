@@ -1,4 +1,3 @@
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-nocheck
 import dynamic from 'next/dynamic';
 import type p5Types from 'p5'; // Import this for typechecking and intellisense

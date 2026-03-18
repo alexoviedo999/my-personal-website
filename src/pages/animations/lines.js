@@ -1,5 +1,5 @@
-import React from 'react';
 import dynamic from 'next/dynamic';
+import React from 'react';
 /* eslint-disable */
 const Sketch = dynamic(() => import('react-p5').then((mod) => mod.default), {
   ssr: false,

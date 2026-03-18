@@ -1,4 +1,3 @@
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-nocheck
 import { Canvas, useFrame } from '@react-three/fiber';
 import React, { useMemo, useRef } from 'react';
@@ -11,13 +10,12 @@ const roundedSquareWave = (t: number, delta: number, a: number, f: number) => {
 function Dots() {
   const ref = useRef<{ setMatrixAt: Function; instanceMatrix: any }>(null);
   const { vec, transform, positions, distances } = useMemo(() => {
-    // eslint-disable-next-line @typescript-eslint/no-shadow
     const vec = new THREE.Vector3();
-    // eslint-disable-next-line @typescript-eslint/no-shadow
+
     const transform = new THREE.Matrix4();
 
     // Precompute randomized initial positions
-    // eslint-disable-next-line @typescript-eslint/no-shadow
+
     const positions = [...Array(10000)].map((_, i) => {
       const position = new THREE.Vector3();
       // Place in a grid
@@ -35,14 +33,13 @@ function Dots() {
 
     // Precompute initial distances with octagonal offset
     const right = new THREE.Vector3(1, 0, 0);
-    // eslint-disable-next-line @typescript-eslint/no-shadow
+
     const distances = positions.map((pos) => {
       return pos.length() + Math.cos(pos.angleTo(right) * 8) * 0.5;
     });
     return { vec, transform, positions, distances };
   }, []);
   useFrame(({ clock }) => {
-    // eslint-disable-next-line no-plusplus
     for (let i = 0; i < 10000; i++) {
       const dist = distances[i];
 
