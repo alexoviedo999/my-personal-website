@@ -1,0 +1,37 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "Bash(npm view @react-three/fiber versions --json | tail -20)",
+      "Bash(npm view @react-three/fiber@9.5.0 peerDependencies)",
+      "Bash(npm view @react-three/drei peerDependencies --json 2>/dev/null | head -20)",
+      "Bash(npm view @react-three/drei version)",
+      "Bash(npm view @react-three/postprocessing peerDependencies --json 2>/dev/null)",
+      "Bash(npm view @react-three/postprocessing version)",
+      "Bash(npm install)",
+      "Bash(npm view flowise-embed-react versions --json 2>/dev/null)",
+      "Bash(npm view flowise-embed-react@3.1.1 peerDependencies --json 2>/dev/null)",
+      "Bash(npm install --legacy-peer-deps)",
+      "Bash(npm run build 2>&1)",
+      "Bash(npx prettier --write \"src/**/*.{ts,tsx}\" \"cypress/**/*.ts\" \"jest.setup.js\")",
+      "Bash(npm view @apideck/components peerDependencies --json 2>/dev/null)",
+      "Bash(npm view @headlessui/react versions --json 2>/dev/null | tail -10)",
+      "Bash(npm ls @headlessui/react 2>/dev/null)",
+      "Bash(npm view @apideck/components versions --json 2>/dev/null | tail -10)",
+      "Bash(npm view @apideck/components@0.13.3 dependencies --json 2>/dev/null | grep headless)",
+      "Bash(npx prettier --write src/pages/flipside-bot.tsx)",
+      "Bash(npm test 2>&1)",
+      "Bash(timeout 15 npm run dev 2>&1 || true)",
+      "Bash(npm run dev 2>&1)",
+      "Bash(sleep 10s && curl -s http://localhost:3000 2>&1 | head -30)",
+      "Bash(pkill -f \"next dev\" 2>/dev/null || true)",
+      "Bash(npx prettier --write src/templates/Main.tsx src/pages/index.tsx src/pages/about.tsx src/pages/animations/index.tsx)",
+      "Bash(git reset HEAD)",
+      "Bash(git add package.json package-lock.json tsconfig.json jest.setup.js next-env.d.ts .eslintrc .eslintignore .prettierrc src/)",
+      "Bash(npx eslint \"src/**/*.{ts,tsx}\" --fix 2>&1 | tail -10)",
+      "Bash(npx eslint \"src/**/*.js\" --fix 2>&1)",
+      "Bash(git add eslint.config.mjs .eslintrc .eslintignore src/ && git status --short)",
+      "Bash(git reset HEAD && git add eslint.config.mjs .eslintrc .eslintignore src/)"
+    ]
+  }
+}
