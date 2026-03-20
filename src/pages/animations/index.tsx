@@ -83,12 +83,19 @@ const AnimationsIndex = () => {
       }
     >
       <NoiseGrid />
-      <div className="relative z-10 mt-16 min-h-screen">
-        <div className="flex flex-col">
-          <h1 className="m-4 text-center text-4xl">Animations</h1>
-        </div>
-        <div className="mt-12 items-center justify-evenly">
-          <CardList />
+      <div className="container mx-auto max-w-5xl px-4 py-12">
+        <div className="z-10 space-y-12">
+          <div className="space-y-4">
+            <h1 className="font-display text-4xl font-bold tracking-tight text-base-content md:text-5xl">
+              <span className="gradient-text">Animations</span>
+            </h1>
+            <p className="text-lg text-base-content/70">
+              Interactive animations and creative coding experiments
+            </p>
+          </div>
+          <div className="items-center justify-evenly">
+            <CardList />
+          </div>
         </div>
       </div>
     </Main>
