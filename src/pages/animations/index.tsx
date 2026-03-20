@@ -82,9 +82,13 @@ const AnimationsIndex = () => {
         />
       }
     >
-      <NoiseGrid />
-      <div className="container mx-auto max-w-5xl px-4 py-12">
-        <div className="z-10 space-y-12">
+      {/* Background animation - rendered separately to avoid hydration mismatch */}
+      <div className="fixed inset-0 -z-10">
+        <NoiseGrid />
+      </div>
+      {/* Main content */}
+      <div className="relative z-10 container mx-auto max-w-5xl px-4 py-12">
+        <div className="space-y-12">
           <div className="space-y-4">
             <h1 className="font-display text-4xl font-bold tracking-tight text-base-content md:text-5xl">
               <span className="gradient-text">Animations</span>
