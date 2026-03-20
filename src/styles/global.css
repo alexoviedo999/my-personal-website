@@ -24,11 +24,11 @@
 
   /* Glow effect for interactive elements */
   .glow-primary {
-    @apply shadow-[0_0_20px_rgba(0,34,210,0.4)];
+    @apply shadow-[0_0_20px_rgba(34,211,238,0.3)];
   }
 
   .glow-secondary {
-    @apply shadow-[0_0_20px_rgba(255,184,0,0.4)];
+    @apply shadow-[0_0_20px_rgba(167,139,250,0.3)];
   }
 }
 
