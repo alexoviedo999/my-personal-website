@@ -66,19 +66,19 @@ module.exports = {
     themes: [
       {
         moderndark: {
-          primary: '#22d3ee', // cyan-400
-          'primary-content': '#0c0a09',
-          secondary: '#a78bfa', // violet-400
-          'secondary-content': '#0c0a09',
-          accent: '#34d399', // emerald-400
-          'accent-content': '#0c0a09',
+          primary: '#1560bd', // cerulean blue
+          'primary-content': '#ffffff',
+          secondary: '#5d76cb', // periwinkle blue
+          'secondary-content': '#000000',
+          accent: '#002395', // royal blue
+          'accent-content': '#ffffff',
           neutral: '#1f2937',
           'neutral-content': '#f3f4f6',
           'base-100': '#09090b',
           'base-200': '#18181b',
           'base-300': '#27272a',
           'base-content': '#f3f4f6',
-          info: '#38bdf8',
+          info: '#1560bd', // cerulean blue
           success: '#4ade80',
           warning: '#fbbf24',
           error: '#f87171',
