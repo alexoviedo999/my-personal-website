@@ -1,60 +1,61 @@
-import { Button, TextArea } from '@apideck/components';
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 import { useMessages } from '../../utils/useMessage';
 
 const MessageForm = () => {
   const [content, setContent] = useState('');
-  const { addMessage } = useMessages();
+  const { addMessage, isLoadingAnswer } = useMessages();
 
-  const handleSubmit = async (e: any) => {
-    if (e.key === 'Enter' || e.type === 'submit') {
-      e?.preventDefault();
-      addMessage(content);
-      setContent('');
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!content.trim() || isLoadingAnswer) return;
+    addMessage(content);
+    setContent('');
+  };
+
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
+      handleSubmit(e);
     }
   };
 
   return (
-    <form
-      className="relative mx-auto max-w-3xl rounded-t-xl"
-      onSubmit={handleSubmit}
-      onKeyDown={handleSubmit}
-    >
-      <div className="h-[130px] border-2 border-red-500 backdrop-blur dark:border-gray-50/[0.06]">
-        <label htmlFor="content" className="sr-only">
-          Your message
-        </label>
-        <TextArea
-          name="content"
-          rows={3}
+    <form onSubmit={handleSubmit} className="relative">
+      <div className="relative flex items-end gap-2 rounded-xl border border-base-300 bg-base-100 p-2">
+        <textarea
           value={content}
-          autoFocus
-          className="text-gray-900 shadow-none backdrop-blur focus:outline-none focus:ring-gray-300/80 dark:bg-gray-800/80 dark:text-white dark:ring-0"
-          onChange={(e: any) => setContent(e.target.value)}
+          onChange={(e) => setContent(e.target.value)}
+          onKeyDown={handleKeyDown}
+          placeholder="Type your message..."
+          rows={1}
+          className="max-h-48 min-h-[48px] w-full resize-none rounded-lg border-0 bg-base-200 px-4 py-3 text-base-content placeholder:text-base-content/40 focus:outline-none focus:ring-2 focus:ring-primary/50"
+          disabled={isLoadingAnswer}
         />
-        <div className="absolute right-8 bottom-10">
-          <div className="flex space-x-3">
-            <Button className="" type="submit" size="small">
-              Send
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="currentColor"
-                className="ml-1 h-4 w-4"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5"
-                />
-              </svg>
-            </Button>
-          </div>
-        </div>
+        <button
+          type="submit"
+          disabled={!content.trim() || isLoadingAnswer}
+          className="btn btn-primary btn-square btn-sm flex-shrink-0 transition-all duration-300 disabled:opacity-50"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="M22 2L11 13" />
+            <path d="M22 2L15 22L11 13L2 9L22 2Z" />
+          </svg>
+        </button>
       </div>
+      <p className="mt-2 text-center text-xs text-base-content/40">
+        Press Enter to send, Shift+Enter for new line
+      </p>
     </form>
   );
 };

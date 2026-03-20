@@ -11,58 +11,123 @@ const MessagesList = () => {
     return JSON.stringify(content);
   };
 
+  // Show welcome message if no messages
+  const hasMessages = messages && messages.length > 0;
+
   return (
-    <div className="m-[120px] mx-auto max-w-3xl">
-      {messages?.map((message, i) => {
-        const isUser = message.role === 'user';
-        if (message.role === 'system') return null;
-        const messageContent = getMessageContent(message.content);
-        return (
-          <div
-            id={`message-${i}`}
-            className={`fade-up mb-2 flex ${
-              isUser ? 'justify-end' : 'justify-start'
-            } ${i === 1 ? 'max-w-md' : ''}`}
-            key={`message-${i}`}
-          >
-            {!isUser && (
-              <img
-                src="/Flag_of_Tar_Valon.svg"
-                className="h-9 w-9 cursor-pointer rounded-full bg-white"
-                alt="avatar"
-              />
-            )}
-            <div
-              style={{ maxWidth: 'calc(100% - 45px)' }}
-              className={`group relative rounded-lg px-3 py-2 ${
-                isUser
-                  ? 'mr-2 bg-gradient-to-br from-indigo-700 to-indigo-600 text-white'
-                  : 'ml-2 bg-gray-200 text-gray-700 dark:bg-gray-800 dark:text-gray-200'
-              }`}
+    <div className="mx-auto max-w-4xl px-4 py-4 sm:py-6">
+      {!hasMessages && !isLoadingAnswer && (
+        <div className="flex flex-col items-center justify-center py-12 text-center sm:py-20">
+          <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary/20">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="text-primary"
             >
-              {messageContent.trim()}
-            </div>
-            {isUser && (
-              <img
-                src="/swirl.svg"
-                className="h-9 w-9 rounded-full"
-                alt="avatar"
-              />
-            )}
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+            </svg>
           </div>
-        );
-      })}
+          <h2 className="mb-2 font-display text-xl font-semibold text-base-content">
+            Welcome to Jerky Boy Bot
+          </h2>
+          <p className="max-w-md text-base-content/60">
+            Ask me anything! I&apos;m an AI assistant ready to help with your
+            questions.
+          </p>
+        </div>
+      )}
+
+      <div className="space-y-4">
+        {messages?.map((message, i) => {
+          const isUser = message.role === 'user';
+          if (message.role === 'system') return null;
+          const messageContent = getMessageContent(message.content);
+          return (
+            <div
+              id={`message-${i}`}
+              className={`flex ${isUser ? 'justify-end' : 'justify-start'}`}
+              key={`message-${i}`}
+            >
+              {!isUser && (
+                <div className="mr-3 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-primary">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="text-primary-content"
+                  >
+                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                  </svg>
+                </div>
+              )}
+              <div
+                className={`max-w-[80%] rounded-2xl px-4 py-3 ${
+                  isUser
+                    ? 'bg-primary text-primary-content'
+                    : 'bg-base-200 text-base-content'
+                }`}
+              >
+                <p className="whitespace-pre-wrap">{messageContent.trim()}</p>
+              </div>
+              {isUser && (
+                <div className="ml-3 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-base-300">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="text-base-content"
+                  >
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                    <circle cx="12" cy="7" r="4" />
+                  </svg>
+                </div>
+              )}
+            </div>
+          );
+        })}
+      </div>
+
       {isLoadingAnswer && (
-        <div className="mb-4 flex justify-start">
-          <img
-            src="/Flag_of_Tar_Valon.svg"
-            className="h-9 w-9 cursor-pointer rounded-full bg-white fill-red-500"
-            alt="avatar"
-          />
-          <div className="loader relative ml-2 flex items-center justify-between space-x-1.5 rounded-full bg-gray-200 p-2.5 px-4 dark:bg-gray-800">
-            <span className="block h-3 w-3 rounded-full"></span>
-            <span className="block h-3 w-3 rounded-full"></span>
-            <span className="block h-3 w-3 rounded-full"></span>
+        <div className="flex justify-start">
+          <div className="mr-3 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-primary">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="text-primary-content"
+            >
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+            </svg>
+          </div>
+          <div className="flex items-center gap-1 rounded-2xl bg-base-200 px-4 py-3">
+            <span className="h-2 w-2 animate-bounce rounded-full bg-base-content/40"></span>
+            <span className="h-2 w-2 animate-bounce rounded-full bg-base-content/40 [animation-delay:0.15s]"></span>
+            <span className="h-2 w-2 animate-bounce rounded-full bg-base-content/40 [animation-delay:0.3s]"></span>
           </div>
         </div>
       )}

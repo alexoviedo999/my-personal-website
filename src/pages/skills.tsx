@@ -1,82 +1,79 @@
+import dynamic from 'next/dynamic';
+
 import { Meta } from '@/layouts/Meta';
 import { Main } from '@/templates/Main';
 
-import Animaton1 from './animations/animation1';
+const NoiseGrid = dynamic(() => import('./animations/noiseGrid'), {
+  ssr: false,
+  loading: () => <div className="fixed inset-0 bg-base-100" />,
+});
+
+const skills = [
+  { name: 'JavaScript', logo: '/js_logo.svg', category: 'language' },
+  { name: 'HTML5', logo: '/HTML5_Badge.svg', category: 'language' },
+  { name: 'CSS3', logo: '/CSS3_logo.svg', category: 'language' },
+  { name: 'TypeScript', logo: '/typescript-logo.svg', category: 'language' },
+  { name: 'React', logo: '/react-logo.svg', category: 'framework' },
+  { name: 'Next.js', logo: '/nextjs-logo.svg', category: 'framework' },
+  { name: 'Node.js', logo: '/nodejs-logo.svg', category: 'runtime' },
+  { name: 'LangChain', logo: '/langchain-logo.png', category: 'ai' },
+  { name: 'Claude Code', logo: '/anthropic-logo.png', category: 'ai' },
+  { name: 'OpenClaw', logo: '/openclaw-logo.png', category: 'ai' },
+  { name: 'Three.js', logo: '/threejs-logo.svg', category: '3d' },
+  { name: 'p5.js', logo: '/p5js-logo.svg', category: 'creative' },
+];
 
 const Skills = () => {
-  // TODO: refactor with flexbox and Daisy figures to make more responsive
   return (
     <Main
       meta={
         <Meta
-          title="Alejandro Oviedo's Project Website"
-          description="A website showing Alejandro Oviedo's interests and projects"
+          title="Skills - Alejandro Oviedo"
+          description="Technical skills and technologies I work with"
         />
       }
     >
-      <Animaton1></Animaton1>
-      <div className="fixed top-0 flex h-full w-full flex-col items-center justify-center">
-        <h1 className="text-4xl">My Skills</h1>
-        <section className="z-10 overflow-hidden text-gray-700">
-          <div className="container mx-auto px-5 py-2 lg:px-32 lg:pt-12">
-            <div className="-m-1 flex max-w-xl flex-wrap md:-m-2">
-              <div className="flex w-1/3 flex-wrap">
-                <div className="m-1 w-full bg-transparent md:p-2">
-                  <img
-                    className="block h-full w-full rounded-lg object-contain object-center"
-                    src="/js_logo.svg"
-                    alt="javascript logo"
-                  />
-                </div>
-              </div>
-              <div className="flex w-1/3 flex-wrap">
-                <div className="m-1 w-full bg-transparent p-1 md:p-2">
-                  <img
-                    alt="HTML 5 Logo"
-                    className="block h-full w-full rounded-lg object-contain object-center"
-                    src="/HTML5_Badge.svg"
-                  />
-                </div>
-              </div>
-              <div className="flex w-1/3 flex-wrap">
-                <div className="m-1 w-full bg-transparent p-1 md:p-2">
-                  <img
-                    alt="CSS 3 Logo"
-                    className="block h-full w-full rounded-lg object-contain object-center"
-                    src="/CSS3_logo.svg"
-                  />
-                </div>
-              </div>
-              <div className="flex w-1/3 flex-wrap">
-                <div className="m-1 w-full bg-transparent p-1 md:p-2">
-                  <img
-                    alt="gallery"
-                    className="block h-full w-full rounded-lg object-contain object-center"
-                    src="https://softprodigy.com/wp-content/uploads/2019/06/nodejs-logo.png"
-                  />
-                </div>
-              </div>
-              <div className="flex w-1/3 flex-wrap">
-                <div className="m-1 w-full bg-transparent p-1 md:p-2">
-                  <img
-                    alt="gallery"
-                    className="block h-full w-full rounded-lg object-contain object-center"
-                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/270px-React-icon.svg.png"
-                  />
-                </div>
-              </div>
-              <div className="flex w-1/3 flex-wrap">
-                <div className="m-1 w-full bg-transparent p-1 md:p-2">
-                  <img
-                    alt="gallery"
-                    className="block h-full w-full rounded-lg object-cover object-center"
-                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/240px-Typescript_logo_2020.svg.png"
-                  />
-                </div>
-              </div>
-            </div>
+      <div className="fixed inset-0 -z-10">
+        <NoiseGrid />
+      </div>
+      <div className="container mx-auto max-w-5xl px-4 py-12">
+        <div className="z-10 space-y-12">
+          <div className="space-y-4">
+            <h1 className="font-display text-4xl font-bold tracking-tight text-base-content md:text-5xl">
+              My <span className="gradient-text">Skills</span>
+            </h1>
+            <p className="text-lg text-base-content/70">
+              Technologies and tools I use to bring ideas to life
+            </p>
           </div>
-        </section>
+
+          <div className="grid grid-cols-3 gap-4 sm:grid-cols-4 md:grid-cols-6">
+            {skills.map((skill) => (
+              <div
+                key={skill.name}
+                className="group relative flex aspect-square flex-col items-center justify-center rounded-xl border border-base-300 bg-base-200/50 p-4 transition-all duration-300 hover:scale-105 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10"
+              >
+                <div className="relative h-12 w-12 sm:h-16 sm:w-16">
+                  <img
+                    src={skill.logo}
+                    alt={`${skill.name} logo`}
+                    className="h-full w-full object-contain"
+                  />
+                </div>
+                <span className="mt-3 text-center text-xs font-medium text-base-content/70 transition-colors duration-300 group-hover:text-primary sm:text-sm">
+                  {skill.name}
+                </span>
+                {/* Tooltip */}
+                <div className="absolute -bottom-10 left-1/2 z-20 w-max -translate-x-1/2 translate-y-2 scale-95 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:scale-100 group-hover:opacity-100">
+                  <div className="rounded-lg bg-base-300 px-3 py-1.5 text-xs font-medium text-base-content shadow-lg">
+                    {skill.name}
+                    <div className="absolute -top-1 left-1/2 h-2 w-2 -translate-x-1/2 rotate-45 bg-base-300" />
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </Main>
   );

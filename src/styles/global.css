@@ -2,22 +2,42 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  body {
+    @apply overflow-x-hidden;
+  }
+}
+
 @layer components {
   .text-color {
-    @apply text-gray-50;
+    @apply text-base-content;
   }
 
   .text-color-link {
-    @apply text-gray-50 hover:text-gray-500;
+    @apply text-base-content/80 hover:text-primary transition-colors duration-300;
+  }
+
+  /* Gradient text effect */
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent;
+  }
+
+  /* Glow effect for interactive elements */
+  .glow-primary {
+    @apply shadow-[0_0_20px_rgba(34,211,238,0.3)];
+  }
+
+  .glow-secondary {
+    @apply shadow-[0_0_20px_rgba(167,139,250,0.3)];
   }
 }
 
 a {
-  @apply text-blue-700;
+  @apply text-primary transition-all duration-300;
 }
 
 a:hover {
-  @apply border-b-2 border-blue-700;
+  @apply text-primary/80;
 }
 
 @tailwind components;
@@ -33,9 +53,8 @@ a:hover {
 }
 
 .scene{
-  width:100vw;
-  height:100vh;
   position: fixed;
+  inset: 0;
 }
 
 .canvas{

@@ -2,6 +2,10 @@
 module.exports = {
   content: ['./src/**/*.{js,ts,jsx,tsx}'],
   theme: {
+    fontFamily: {
+      sans: ['Inter', 'system-ui', 'sans-serif'],
+      display: ['Space Grotesk', 'system-ui', 'sans-serif'],
+    },
     fontSize: {
       xs: '0.75rem',
       sm: '0.875rem',
@@ -13,6 +17,7 @@ module.exports = {
       '4xl': '2.25rem',
       '5xl': '3rem',
       '6xl': '4rem',
+      '7xl': '5rem',
     },
     extend: {
       colors: {
@@ -39,8 +44,46 @@ module.exports = {
           900: '#2a4365',
         },
       },
+      animation: {
+        'fade-in': 'fadeIn 0.5s ease-out forwards',
+        'slide-up': 'slideUp 0.5s ease-out forwards',
+      },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        slideUp: {
+          '0%': { opacity: '0', transform: 'translateY(20px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+      },
     },
   },
   // eslint-disable-next-line global-require
-  plugins: [require('daisyui')],
+  plugins: [require('daisyui'), require('@tailwindcss/typography')],
+  daisyui: {
+    themes: [
+      {
+        moderndark: {
+          primary: '#22d3ee', // cyan-400
+          'primary-content': '#0c0a09',
+          secondary: '#a78bfa', // violet-400
+          'secondary-content': '#0c0a09',
+          accent: '#34d399', // emerald-400
+          'accent-content': '#0c0a09',
+          neutral: '#1f2937',
+          'neutral-content': '#f3f4f6',
+          'base-100': '#09090b',
+          'base-200': '#18181b',
+          'base-300': '#27272a',
+          'base-content': '#f3f4f6',
+          info: '#38bdf8',
+          success: '#4ade80',
+          warning: '#fbbf24',
+          error: '#f87171',
+        },
+      },
+    ],
+  },
 };
