@@ -23,7 +23,7 @@ const Main = (props: IMainProps) => (
 
     {/* Navbar */}
     <nav className="navbar fixed top-0 z-50 border-b border-base-300/50 bg-base-100/80 backdrop-blur-md px-4">
-      {/* Mobile menu button - visible on small screens */}
+      {/* Mobile menu button + Brand - left aligned */}
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost btn-circle lg:hidden">
@@ -58,13 +58,11 @@ const Main = (props: IMainProps) => (
             ))}
           </ul>
         </div>
-      </div>
 
-      {/* Brand - centered */}
-      <div className="navbar-center">
+        {/* Brand - left aligned */}
         <Link
           href="/"
-          className="btn btn-ghost text-lg font-display font-semibold normal-case tracking-tight"
+          className="btn btn-ghost text-lg font-display font-semibold normal-case tracking-tight ml-2"
         >
           Alejandro Oviedo
         </Link>
