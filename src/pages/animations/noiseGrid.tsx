@@ -14,8 +14,8 @@ const Z_SCALE = 1.0;
 const TIME_MULTIPLIER = 0.4;
 const LIGHTNESS_MULT = 3.0;
 
-const LOW_COLOR = new THREE.Color(0.0, 0.3, 0.6);
-const HIGH_COLOR = new THREE.Color(1.0, 1.0, 1.0);
+const LOW_COLOR = new THREE.Color(0.0, 0.13, 0.82); // #0022d2 - bright blue
+const HIGH_COLOR = new THREE.Color(1.0, 0.72, 0.0); // #ffb800 - golden yellow
 
 function NoisePoints() {
   const ref = useRef<THREE.Points>(null);
