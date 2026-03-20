@@ -1,10 +1,13 @@
+import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import Link from 'next/link';
 
 import { Meta } from '@/layouts/Meta';
 import { Main } from '@/templates/Main';
 
-import Animation1 from './animation1';
+const NoiseGrid = dynamic(() => import('./noiseGrid'), {
+  ssr: false,
+});
 
 const animationItems = [
   {
@@ -31,16 +34,6 @@ const animationItems = [
     image: '/animation-screenshots/circle-snake.png',
     title: 'Circle Snake',
     url: './animations/noc/noc-i-05/',
-  },
-  {
-    image: '/animation-screenshots/animation1.png',
-    title: 'Animation 1',
-    url: './animations/animation1',
-  },
-  {
-    image: '/animation-screenshots/animation3.png',
-    title: 'Animation 3',
-    url: './animations/animation3',
   },
 ];
 
@@ -89,12 +82,12 @@ const AnimationsIndex = () => {
         />
       }
     >
-      <Animation1></Animation1>
-      <div className="absolute mt-16">
-        <div className="relative flex flex-col">
+      <NoiseGrid />
+      <div className="relative z-10 mt-16 min-h-screen">
+        <div className="flex flex-col">
           <h1 className="m-4 text-center text-4xl">Animations</h1>
         </div>
-        <div className="relative z-20 mt-12 items-center justify-evenly">
+        <div className="mt-12 items-center justify-evenly">
           <CardList />
         </div>
       </div>
