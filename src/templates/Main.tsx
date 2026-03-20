@@ -26,7 +26,7 @@ const Main = (props: IMainProps) => (
       {/* Mobile menu button + Brand - left aligned */}
       <div className="navbar-start">
         <div className="dropdown">
-          <label tabIndex={0} className="btn btn-ghost btn-circle lg:hidden">
+          <label tabIndex={0} className="btn btn-ghost btn-circle 2xl:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"
@@ -71,7 +71,7 @@ const Main = (props: IMainProps) => (
       {/* Desktop navigation + social links - right side */}
       <div className="navbar-end gap-2">
         {/* Desktop nav links */}
-        <ul className="menu menu-horizontal hidden items-center gap-1 px-1 lg:flex">
+        <ul className="menu menu-horizontal hidden items-center gap-1 px-1 2xl:flex">
           {navLinks.slice(1).map((link) => (
             <li key={link.href}>
               <Link
