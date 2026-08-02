@@ -14,8 +14,8 @@ const Index = () => {
     <Main
       meta={
         <Meta
-          title="Alejandro Oviedo - Front-End Developer"
-          description="Front-end developer specializing in creative interactions, animations, and modern web experiences"
+          title="Alejandro Oviedo - Agentic AI Engineer"
+          description="Staff Software Engineer building agentic AI systems - LLM agents, RAG, and evals - that power secure payment experiences at Visa"
         />
       }
     >
@@ -28,10 +28,11 @@ const Index = () => {
               <span className="gradient-text">Alejandro Oviedo</span>
             </h1>
             <p className="max-w-2xl text-left text-lg leading-relaxed text-base-content/70 md:text-xl">
-              A front-end developer with 10+ years of experience crafting
-              interactive digital experiences. I specialize in creative
-              animations, modern web technologies, and building products that
-              delight users.
+              Staff Software Engineer at Visa building agentic AI systems -
+              LLM agents, RAG pipelines, and eval frameworks - that power
+              secure payment experiences for millions of consumers. Recently
+              completed a postgraduate program in AI Agents for Business
+              Applications at UT Austin's McCombs School of Business.
             </p>
             <div className="flex flex-wrap gap-3 pt-4">
               <Link
@@ -39,6 +40,12 @@ const Index = () => {
                 className="btn btn-primary transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/25"
               >
                 About Me
+              </Link>
+              <Link
+                href="/projects"
+                className="btn btn-outline btn-primary transition-all duration-300 hover:scale-105"
+              >
+                Projects
               </Link>
               <Link
                 href="/skills"

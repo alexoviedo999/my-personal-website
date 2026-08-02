@@ -9,7 +9,7 @@ const About = () => {
       meta={
         <Meta
           title="About - Alejandro Oviedo"
-          description="Learn more about Alejandro Oviedo, a front-end developer with 10+ years of experience"
+          description="Learn more about Alejandro Oviedo, a Staff Software Engineer building agentic AI systems and securing payments at Visa"
         />
       }
     >
@@ -21,28 +21,41 @@ const About = () => {
 
           <div className="prose prose-lg prose-invert max-w-none">
             <p className="text-xl font-medium leading-relaxed text-base-content/90">
-              I'm a seasoned Front-End Developer with over a decade of
-              professional experience in the tech industry. My passion extends
-              beyond software development, reaching into the realms of art,
-              music, and geopolitics.
+              I'm a Staff Software Engineer at Visa focused on agentic AI
+              engineering - building LLM-powered agents, RAG systems, and
+              evaluation frameworks. My background spans front-end
+              development, application security, and now agentic systems,
+              with a passion that extends beyond software into art, music,
+              and geopolitics.
             </p>
 
             <p>
-              For the past five years, I've been an integral part of Visa's
-              software engineering team, focusing on the innovation of the
-              "Click to Pay" Secure Remote Commerce platform. This platform,
-              used by an international market of over 60 million users, has been
-              a testament to my love for working in diverse, multi-disciplinary
-              teams. Together, we've delivered an industry-wide commerce
-              platform that transcends borders and time zones.
+              For nearly a decade, I've been part of Visa's software
+              engineering team, most recently architecting agentic AI
+              workflows that power a new white-label checkout experience for
+              ecommerce merchants - work that tripled developer throughput
+              and cut security evaluation time by 55%. I also serve as
+              Security Champion for the platform, coordinating SSDLC
+              remediation, CIAM, and Security Risk Assessments across every
+              production release.
+            </p>
+
+            <p>
+              In 2026, I completed a postgraduate program in AI Agents for
+              Business Applications at UT Austin's McCombs School of
+              Business, building an AI-powered EHR assistant and a
+              Retrieval-Augmented Generation (RAG) system for enterprise
+              document Q&A - deepening my focus on agent orchestration,
+              LangChain, and the Model Context Protocol (MCP).
             </p>
 
             <p>
               I thrive on challenges and believe in the power of hard work,
-              teamwork, and technical prowess to turn complex projects into
-              successful ventures. My goal is to continually learn, grow, and
-              excel as a Front-End Developer, using Agile principles to deliver
-              value that users will love, iteration after iteration.
+              teamwork, and technical rigor to turn complex projects into
+              successful ventures. My goal is to keep pushing the boundary
+              between agentic AI and secure, production-grade software,
+              using Agile principles to deliver value iteration after
+              iteration.
             </p>
 
             <div className="my-8 rounded-xl border border-base-300 bg-base-200/50 p-6">
@@ -85,6 +98,12 @@ const About = () => {
 
           <div className="flex flex-wrap gap-4 pt-8">
             <Link
+              href="/projects"
+              className="btn btn-primary transition-all duration-300 hover:scale-105"
+            >
+              View My Projects
+            </Link>
+            <Link
               href="/skills"
               className="btn btn-outline btn-primary transition-all duration-300 hover:scale-105"
             >
@@ -92,7 +111,7 @@ const About = () => {
             </Link>
             <Link
               href="/contact"
-              className="btn btn-primary transition-all duration-300 hover:scale-105"
+              className="btn btn-outline btn-primary transition-all duration-300 hover:scale-105"
             >
               Get in Touch
             </Link>

@@ -13,12 +13,25 @@ const skills = [
   { name: 'HTML5', logo: '/HTML5_Badge.svg', category: 'language' },
   { name: 'CSS3', logo: '/CSS3_logo.svg', category: 'language' },
   { name: 'TypeScript', logo: '/typescript-logo.svg', category: 'language' },
+  { name: 'Python', logo: '/python-logo.svg', category: 'language' },
   { name: 'React', logo: '/react-logo.svg', category: 'framework' },
   { name: 'Next.js', logo: '/nextjs-logo.svg', category: 'framework' },
   { name: 'Node.js', logo: '/nodejs-logo.svg', category: 'runtime' },
   { name: 'LangChain', logo: '/langchain-logo.png', category: 'ai' },
   { name: 'Claude Code', logo: '/anthropic-logo.png', category: 'ai' },
   { name: 'OpenClaw', logo: '/openclaw-logo.png', category: 'ai' },
+  { name: 'RAG', logo: '/rag-logo.svg', category: 'ai' },
+  {
+    name: 'Model Context Protocol',
+    logo: '/mcp-logo.svg',
+    category: 'ai',
+  },
+  {
+    name: 'Prompt Engineering',
+    logo: '/prompt-engineering-logo.svg',
+    category: 'ai',
+  },
+  { name: 'AppSec / SSDLC', logo: '/appsec-logo.svg', category: 'security' },
   { name: 'Three.js', logo: '/threejs-logo.svg', category: '3d' },
   { name: 'p5.js', logo: '/p5js-logo.svg', category: 'creative' },
 ];
@@ -29,7 +42,7 @@ const Skills = () => {
       meta={
         <Meta
           title="Skills - Alejandro Oviedo"
-          description="Technical skills and technologies I work with"
+          description="Technical skills spanning agentic AI, RAG, application security, and modern web development"
         />
       }
     >
