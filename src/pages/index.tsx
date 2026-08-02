@@ -28,11 +28,11 @@ const Index = () => {
               <span className="gradient-text">Alejandro Oviedo</span>
             </h1>
             <p className="max-w-2xl text-left text-lg leading-relaxed text-base-content/70 md:text-xl">
-              Staff Software Engineer at Visa building agentic AI systems -
-              LLM agents, RAG pipelines, and eval frameworks - that power
-              secure payment experiences for millions of consumers. Recently
-              completed a postgraduate program in AI Agents for Business
-              Applications at UT Austin's McCombs School of Business.
+              Staff Software Engineer at Visa building agentic AI systems - LLM
+              agents, RAG pipelines, and eval frameworks - that power secure
+              payment experiences for millions of consumers. Recently completed
+              a postgraduate program in AI Agents for Business Applications at
+              UT Austin's McCombs School of Business.
             </p>
             <div className="flex flex-wrap gap-3 pt-4">
               <Link

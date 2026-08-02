@@ -23,39 +23,36 @@ const About = () => {
             <p className="text-xl font-medium leading-relaxed text-base-content/90">
               I'm a Staff Software Engineer at Visa focused on agentic AI
               engineering - building LLM-powered agents, RAG systems, and
-              evaluation frameworks. My background spans front-end
-              development, application security, and now agentic systems,
-              with a passion that extends beyond software into art, music,
-              and geopolitics.
+              evaluation frameworks. My background spans front-end development,
+              application security, and now agentic systems, with a passion that
+              extends beyond software into art, music, and geopolitics.
             </p>
 
             <p>
-              For nearly a decade, I've been part of Visa's software
-              engineering team, most recently architecting agentic AI
-              workflows that power a new white-label checkout experience for
-              ecommerce merchants - work that tripled developer throughput
-              and cut security evaluation time by 55%. I also serve as
-              Security Champion for the platform, coordinating SSDLC
-              remediation, CIAM, and Security Risk Assessments across every
-              production release.
+              For nearly a decade, I've been part of Visa's software engineering
+              team, most recently architecting agentic AI workflows that power a
+              new white-label checkout experience for ecommerce merchants - work
+              that tripled developer throughput and cut security evaluation time
+              by 55%. I also serve as Security Champion for the platform,
+              coordinating SSDLC remediation, CIAM, and Security Risk
+              Assessments across every production release.
             </p>
 
             <p>
               In 2026, I completed a postgraduate program in AI Agents for
-              Business Applications at UT Austin's McCombs School of
-              Business, building an AI-powered EHR assistant and a
-              Retrieval-Augmented Generation (RAG) system for enterprise
-              document Q&A - deepening my focus on agent orchestration,
-              LangChain, and the Model Context Protocol (MCP).
+              Business Applications at UT Austin's McCombs School of Business,
+              building an AI-powered EHR assistant and a Retrieval-Augmented
+              Generation (RAG) system for enterprise document Q&A - deepening my
+              focus on agent orchestration, LangChain, and the Model Context
+              Protocol (MCP).
             </p>
 
             <p>
               I thrive on challenges and believe in the power of hard work,
               teamwork, and technical rigor to turn complex projects into
               successful ventures. My goal is to keep pushing the boundary
-              between agentic AI and secure, production-grade software,
-              using Agile principles to deliver value iteration after
-              iteration.
+              between agentic AI and secure, production-grade software, using
+              Agile principles to deliver value iteration after iteration.
             </p>
 
             <div className="my-8 rounded-xl border border-base-300 bg-base-200/50 p-6">
