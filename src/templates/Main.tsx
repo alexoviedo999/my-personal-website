@@ -11,6 +11,7 @@ type IMainProps = {
 const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/skills', label: 'Skills' },
+  { href: '/projects', label: 'Projects' },
   { href: '/animations', label: 'Animations' },
   { href: '/chatbot', label: 'Jerky Bot' },
   { href: '/about', label: 'About' },
