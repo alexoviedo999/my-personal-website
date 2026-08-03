@@ -5,17 +5,52 @@ import React, { useState } from 'react';
 import { Meta } from '@/layouts/Meta';
 import { Main } from '@/templates/Main';
 
-const FORM_ENDPOINT = 'https://formsubmit.co/6ab4ab3e72ec227c3063588139e92fbe';
+type Status = 'idle' | 'submitting' | 'success' | 'error';
 
 const Contact = () => {
-  const [submitted, setSubmitted] = useState(false);
-  const handleSubmit = () => {
-    setTimeout(() => {
-      setSubmitted(true);
-    }, 100);
+  const [status, setStatus] = useState<Status>('idle');
+  const [errorMessage, setErrorMessage] = useState('');
+
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setStatus('submitting');
+    setErrorMessage('');
+
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+    const payload = {
+      name: formData.get('name'),
+      email: formData.get('email'),
+      message: formData.get('message'),
+    };
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(
+          data?.error ?? 'Something went wrong. Please try again.',
+        );
+      }
+
+      form.reset();
+      setStatus('success');
+    } catch (err) {
+      setErrorMessage(
+        err instanceof Error
+          ? err.message
+          : 'Something went wrong. Please try again.',
+      );
+      setStatus('error');
+    }
   };
 
-  if (submitted) {
+  if (status === 'success') {
     return (
       <Main
         meta={
@@ -47,7 +82,7 @@ const Contact = () => {
               Thank you!
             </h2>
             <p className="mt-2 text-base-content/70">
-              I'll get back to you soon.
+              I&apos;ll get back to you soon.
             </p>
           </div>
         </div>
@@ -71,8 +106,8 @@ const Contact = () => {
               Get in <span className="gradient-text">Touch</span>
             </h1>
             <p className="text-lg text-base-content/70">
-              Have a project in mind or just want to say hi? I'd love to hear
-              from you.
+              Have a project in mind or just want to say hi? I&apos;d love to
+              hear from you.
             </p>
           </div>
 
@@ -81,7 +116,7 @@ const Contact = () => {
             <div className="space-y-6">
               <div className="rounded-xl border border-base-300 bg-base-200/30 p-6">
                 <h3 className="mb-4 font-display font-semibold text-primary">
-                  Let's Connect
+                  Let&apos;s Connect
                 </h3>
                 <div className="space-y-4">
                   <a
@@ -147,11 +182,8 @@ const Contact = () => {
 
             {/* Contact form */}
             <form
-              className="rounded-xl border border-base-300 bg-base-200/30 p-6 space-y-4"
-              action={FORM_ENDPOINT}
+              className="space-y-4 rounded-xl border border-base-300 bg-base-200/30 p-6"
               onSubmit={handleSubmit}
-              method="POST"
-              target="_blank"
             >
               <div>
                 <label className="mb-2 block text-sm font-medium text-base-content/80">
@@ -189,11 +221,15 @@ const Contact = () => {
                   required
                 />
               </div>
+              {status === 'error' && (
+                <p className="text-sm text-error">{errorMessage}</p>
+              )}
               <button
                 type="submit"
-                className="btn btn-primary w-full transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-primary/25"
+                disabled={status === 'submitting'}
+                className="btn btn-primary w-full transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-primary/25 disabled:opacity-60"
               >
-                Send Message
+                {status === 'submitting' ? 'Sending...' : 'Send Message'}
               </button>
             </form>
           </div>
