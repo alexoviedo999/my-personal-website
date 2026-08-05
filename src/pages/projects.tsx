@@ -8,7 +8,16 @@ const NoiseGrid = dynamic(() => import('./animations/noiseGrid'), {
   loading: () => <div className="fixed inset-0 bg-base-100" />,
 });
 
-const projects = [
+type Project = {
+  title: string;
+  meta: string;
+  description: string;
+  tags: string[];
+  link?: string;
+  demoLink?: string;
+};
+
+const projects: Project[] = [
   {
     title: 'AI-Powered EHR Assistant',
     meta: 'Capstone Project | UT Austin McCombs - AI Agents for Business Applications | 2026',
@@ -35,6 +44,35 @@ const projects = [
       'Evals',
     ],
   },
+  {
+    title: 'Last-Mile Delivery Exception Agents',
+    meta: 'Course Project | UT Austin McCombs - AI Agents for Business Applications | 2026',
+    description:
+      'A LangGraph multi-agent system that triages and resolves last-mile delivery exceptions - deduplicating noisy shipment logs, deciding a resolution against an operational playbook via RAG, escalating to a human when policy requires it, and drafting a personalized customer notification, with a full auditable decision trail.',
+    tags: [
+      'LangGraph',
+      'Multi-Agent Systems',
+      'RAG',
+      'Python',
+      'Human-in-the-loop',
+    ],
+    link: 'https://github.com/alexoviedo999/last-mile-delivery-agents',
+  },
+  {
+    title: 'Securing Agents - Multi-Agent Customer Support',
+    meta: 'Independent Project | AI Agents for Business Applications | 2026',
+    description:
+      'A LangGraph-orchestrated customer support assistant with production-style security guardrails: prompt-injection detection, output-safety scanning, tier-based access control, and a full audit trail across four specialist support agents.',
+    tags: [
+      'LangGraph',
+      'AI Security',
+      'Multi-Agent Systems',
+      'Streamlit',
+      'Guardrails',
+    ],
+    link: 'https://github.com/alexoviedo999/securing-agents',
+    demoLink: 'https://huggingface.co/spaces/alexoviedo999/securing-agents',
+  },
 ];
 
 const Projects = () => {
@@ -43,7 +81,7 @@ const Projects = () => {
       meta={
         <Meta
           title="Projects - Alejandro Oviedo"
-          description="Agentic AI projects, including an EHR assistant and a RAG system for enterprise document Q&A"
+          description="Agentic AI projects, including an EHR assistant, a RAG system for enterprise document Q&A, and multi-agent systems for logistics and customer support"
         />
       }
     >
@@ -87,6 +125,30 @@ const Projects = () => {
                     </span>
                   ))}
                 </div>
+                {(project.link || project.demoLink) && (
+                  <div className="mt-4 flex flex-wrap gap-3">
+                    {project.link && (
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn btn-sm btn-outline"
+                      >
+                        View Code
+                      </a>
+                    )}
+                    {project.demoLink && (
+                      <a
+                        href={project.demoLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn btn-sm btn-primary"
+                      >
+                        Live Demo
+                      </a>
+                    )}
+                  </div>
+                )}
               </div>
             ))}
           </div>
