@@ -19,6 +19,35 @@ type Project = {
 
 const projects: Project[] = [
   {
+    title: 'Securing Agents - Multi-Agent Customer Support',
+    meta: 'Independent Project | AI Agents for Business Applications | 2026',
+    description:
+      'A LangGraph-orchestrated customer support assistant with production-style security guardrails: prompt-injection detection, output-safety scanning, tier-based access control, and a full audit trail across four specialist support agents.',
+    tags: [
+      'LangGraph',
+      'AI Security',
+      'Multi-Agent Systems',
+      'Streamlit',
+      'Guardrails',
+    ],
+    link: 'https://github.com/alexoviedo999/securing-agents',
+    demoLink: 'https://huggingface.co/spaces/alexoviedo999/securing-agents',
+  },
+  {
+    title: 'Last-Mile Delivery Exception Agents',
+    meta: 'Course Project | UT Austin McCombs - AI Agents for Business Applications | 2026',
+    description:
+      'A LangGraph multi-agent system that triages and resolves last-mile delivery exceptions - deduplicating noisy shipment logs, deciding a resolution against an operational playbook via RAG, escalating to a human when policy requires it, and drafting a personalized customer notification, with a full auditable decision trail.',
+    tags: [
+      'LangGraph',
+      'Multi-Agent Systems',
+      'RAG',
+      'Python',
+      'Human-in-the-loop',
+    ],
+    link: 'https://github.com/alexoviedo999/last-mile-delivery-agents',
+  },
+  {
     title: 'AI-Powered EHR Assistant',
     meta: 'Capstone Project | UT Austin McCombs - AI Agents for Business Applications | 2026',
     description:
@@ -43,35 +72,6 @@ const projects: Project[] = [
       'Model Context Protocol (MCP)',
       'Evals',
     ],
-  },
-  {
-    title: 'Last-Mile Delivery Exception Agents',
-    meta: 'Course Project | UT Austin McCombs - AI Agents for Business Applications | 2026',
-    description:
-      'A LangGraph multi-agent system that triages and resolves last-mile delivery exceptions - deduplicating noisy shipment logs, deciding a resolution against an operational playbook via RAG, escalating to a human when policy requires it, and drafting a personalized customer notification, with a full auditable decision trail.',
-    tags: [
-      'LangGraph',
-      'Multi-Agent Systems',
-      'RAG',
-      'Python',
-      'Human-in-the-loop',
-    ],
-    link: 'https://github.com/alexoviedo999/last-mile-delivery-agents',
-  },
-  {
-    title: 'Securing Agents - Multi-Agent Customer Support',
-    meta: 'Independent Project | AI Agents for Business Applications | 2026',
-    description:
-      'A LangGraph-orchestrated customer support assistant with production-style security guardrails: prompt-injection detection, output-safety scanning, tier-based access control, and a full audit trail across four specialist support agents.',
-    tags: [
-      'LangGraph',
-      'AI Security',
-      'Multi-Agent Systems',
-      'Streamlit',
-      'Guardrails',
-    ],
-    link: 'https://github.com/alexoviedo999/securing-agents',
-    demoLink: 'https://huggingface.co/spaces/alexoviedo999/securing-agents',
   },
 ];
 
