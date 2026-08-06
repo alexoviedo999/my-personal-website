@@ -61,6 +61,7 @@ const projects: Project[] = [
       'Python',
       'Human-in-the-loop',
     ],
+    link: 'https://github.com/alexoviedo999/ehr-assistant',
   },
   {
     title: 'RAG System for Enterprise Document Q&A',
@@ -74,6 +75,7 @@ const projects: Project[] = [
       'Model Context Protocol (MCP)',
       'Evals',
     ],
+    link: 'https://github.com/alexoviedo999/enterprise-document-rag',
   },
 ];
 
