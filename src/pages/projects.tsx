@@ -46,6 +46,7 @@ const projects: Project[] = [
       'Human-in-the-loop',
     ],
     link: 'https://github.com/alexoviedo999/last-mile-delivery-agents',
+    demoLink: 'https://huggingface.co/spaces/alexoviedo999/last-mile-delivery-agents',
   },
   {
     title: 'AI-Powered EHR Assistant',
