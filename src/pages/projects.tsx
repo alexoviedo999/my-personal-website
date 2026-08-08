@@ -20,9 +20,8 @@ type Project = {
 const projects: Project[] = [
   {
     title: 'Securing Agents - Multi-Agent Customer Support',
-    meta: 'Independent Project | AI Agents for Business Applications | 2026',
-    description:
-      'A LangGraph-orchestrated customer support assistant with production-style security guardrails: prompt-injection detection, output-safety scanning, tier-based access control, and a full audit trail across four specialist support agents.',
+    meta: 'Course Project | UT Austin McCombs - AI Agents for Business Applications | 2026',
+    description: 'A LangGraph-orchestrated customer support assistant with production-style security guardrails: prompt-injection detection, output-safety scanning, tier-based access control, and a full audit trail across four specialist support agents.',
     tags: [
       'LangGraph',
       'AI Security',
